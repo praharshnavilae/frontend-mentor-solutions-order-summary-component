@@ -1,0 +1,151 @@
+:root {
+    --clr-background: hsl(225, 100%, 94%);
+    --clr-button: hsl(245, 75%, 52%);
+    --clr-button1: hsl(245, 75%, 70%);
+
+    --clr-white: hsl(225, 100%, 98%);
+    --clr-white1: hsl(225, 100%, 98.5%);
+
+    --clr-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-dark-blue: hsl(223, 47%, 23%);
+
+    --font-family-default: 'Red Hat Display', sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+    --spacing: 1rem;
+    --spacing-extra: 1.5rem;
+    --spacing-max: 2.5rem;
+}
+
+*, *::before, ::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
+img, svg {
+    display: block;
+    width: 100%;
+}
+
+body {
+    font-family: var(--font-family-default);
+    background-color: var(--clr-background);
+    color: var(--clr-desaturated-blue);
+    font-size: 0.9rem;
+    font-weight: var(--fw-regular);
+    min-height: 120vh;
+
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+
+@media (min-width: 900px) {
+    .background {
+        top: -22%;
+    }
+}
+
+button {
+    background-color: var(--clr-button);
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+    border: 0;
+    border-radius: 0.5rem;
+    padding: var(--spacing);
+    margin-inline: var(--spacing-extra);
+    box-shadow: 0px 15px 25px -12px var(--clr-desaturated-blue);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--clr-button1);
+}
+
+.order-summary {
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: var(--spacing-extra);
+    box-shadow: 0px 15px 30px -12px var(--clr-desaturated-blue);
+}
+
+@media (min-width: 400px) {
+    .order-summary {
+        max-width: 330px;
+    }
+}
+
+.content {
+    display: grid;
+    gap: var(--spacing-extra);
+    margin: var(--spacing-extra) 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: var(--fw-black);
+    color: var(--clr-dark-blue);
+}
+
+.plan {
+    background-color: var(--clr-white1);
+    padding: var(--spacing);
+    margin-inline: var(--spacing-extra);
+    font-size: 0.8rem;
+    line-height: 1.5;
+
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan p {
+    text-align: left;
+    flex: 1;
+    margin-left: var(--spacing);
+}
+
+span {
+    color: var(--clr-dark-blue);
+    font-weight: var(--fw-black);
+}
+
+a {
+    font-size: 0.7rem;
+    color: var(--clr-button);
+    font-weight: var(--fw-bold);
+}
+
+a:hover {
+    color:var(--clr-button1);
+}
+
+.cancel {
+    font-weight: var(--fw-black);
+    margin-bottom: 0.5rem;
+}
+
+.cancel:hover {
+    cursor: pointer;
+    color: var(--clr-dark-blue);
+}
+
+
